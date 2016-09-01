@@ -1,0 +1,9 @@
+#lang racket
+
+(define (sequence low high stride)
+  (cond [(<= low high)
+         (cons low (sequence (+ low stride) high stride))]
+        [#t null]))
+
+(define (string-append-map xs suffix)
+  (map (lambda(x)(string-append x suffix)) xs))
