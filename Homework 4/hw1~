@@ -1,7 +1,0 @@
-#lang racket
-(define (secuence start end increment)
-  (if (<= increment (- start end))
-      null
-      (cons start (secuence (+ start increment) end increment))
-   )
-)
